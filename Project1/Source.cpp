@@ -1,8 +1,16 @@
 #include<iostream>
 #include<vector>
 #include"adin.h"
+#include"Matrix.h"
 using namespace std;
 
+
+void skyrim(string message)
+{
+	cout << message << endl;
+	cout << "preesssssss key to exit" << endl;
+	exit(1);
+}
 
 int main()
 {
@@ -15,4 +23,8 @@ int main()
 	/*cout << endl;
 	cout<<stringPair;    */  
 	
+	cout << endl;
+	Matrix<int> matr(5, 8);
+	cout<< matr;
+
 }
