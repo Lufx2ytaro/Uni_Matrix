@@ -1,72 +1,18 @@
 #include<iostream>
 #include<vector>
+#include"adin.h"
 using namespace std;
 
-template<class T_one,class T_Two>
-class Ppair
-{
-	T_one val_one;
-	T_Two val_two;
-public:
-
-	Ppair() : val_one{ T_one() }, val_two{ T_Two() } {};
-
-	Ppair(const T_one&  val_one,const T_Two& val_two) :
-		val_one{val_one},
-		val_two{val_two}
-	{}
-
-	void setValOne(T_one val)
-	{
-		val_one = val;
-	}
-	void setValTwo(T_Two val)
-	{
-		val_two = val;
-	}
-
-	void display() const 
-	{
-		cout << "( " << val_one << ", " << val_two << " )";
-	}
-
-	T_one getValOne() const
-	{
-		return val_one;
-	}
-	T_Two getValTwo() const
-	{
-		return val_two;
-	}
-
-
-
-	bool operator==(const Ppair& pair)
-	{
-		return this->val_one == pair.val_one && this->val_two == pair.val_two;
-	}
-
-	bool operator!=(const Ppair& pair)
-	{
-		return !(*this == pair);
-	}
-
-	friend std::ostream& operator<<(ostream& output, const Ppair& pair)
-	{
-		output << "( " << pair.getValOne() << ", " << pair.getValTwo() << " )";
-		return output;
-	}
-
-};
 
 int main()
 {
 	Ppair<int, int> intPair(1,2);
 	Ppair<int, int> intPair_1(1,2);
-	Ppair<string, string> stringPair("Ivan", "Iosif");
-	intPair.display();
-	cout << endl;
+	Ppair<string, string> stringPair("KEVIN", "LEE");
+	/*intPair.display();
+	cout << endl;*/
 	stringPair.display();
+	/*cout << endl;
+	cout<<stringPair;    */  
 	
-	cout<<stringPair;      
 }
